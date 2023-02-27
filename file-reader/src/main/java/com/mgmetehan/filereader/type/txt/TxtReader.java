@@ -57,9 +57,39 @@ public class TxtReader {
         }
     }
 
+    public void readTxtWord(String path,String findWord) {
+        BufferedReader bufferedReader = null;
+        int offset = 0;
+        try {
+            bufferedReader = new BufferedReader(new FileReader(path));
+            StringBuilder stringBuilder = new StringBuilder();
+            String line = bufferedReader.readLine();
+            String[] splited;
+
+            while (line != null) {
+                stringBuilder.append(line);
+                stringBuilder.append(System.lineSeparator());
+                line = bufferedReader.readLine();
+            }
+            String everything = stringBuilder.toString();
+            splited = everything.split("\\s+");
+            for (String word : splited) {
+                offset+=word.length();
+                if (word.equals(findWord)) {
+                    System.out.println(word+" "+offset);
+                }
+            }
+            //System.out.println(everything);
+            bufferedReader.close();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     public static void main(String[] args) {
         var path = "/Users/mgmetehan/Desktop/chomar/c-port.txt";
         TxtReader txtReader = new TxtReader();
-        txtReader.readTxtFirst2Byte(path);
+        //txtReader.readTxtFirst2Byte(path);
+        txtReader.readTxtWord(path,"git");
     }
 }
