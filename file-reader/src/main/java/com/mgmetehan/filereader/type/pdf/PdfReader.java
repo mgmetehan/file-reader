@@ -7,7 +7,7 @@ import java.io.File;
 
 public class PdfReader {
 
-    public void ReadData(String path) {
+    public void readPdfFirst2Byte(String path) {
         try {
             PDDocument document = PDDocument.load(new File(path));
             if (!document.isEncrypted()) {
@@ -27,7 +27,7 @@ public class PdfReader {
     public static void main(String[] args) {
         PdfReader pdfReader = new PdfReader();
         var path = "/Users/mgmetehan/Desktop/chomar/C-ProtStajyerproje.pdf";
-        pdfReader.ReadData(path);
+        pdfReader.readPdfFirst2Byte(path);
     }
 }
 

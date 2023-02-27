@@ -8,7 +8,7 @@ import java.nio.file.Paths;
 import java.util.List;
 
 public class WordReader {
-    public void ReadDataFirst2Byte(String path) {
+    public void readWordFirst2Byte(String path) {
         String result = "";
 
         try {
@@ -26,6 +26,6 @@ public class WordReader {
     public static void main(String[] args) {
         WordReader wordReader = new WordReader();
         var path = "/Users/mgmetehan/Desktop/chomar/deneme.docx";
-        wordReader.ReadDataFirst2Byte(path);
+        wordReader.readWordFirst2Byte(path);
     }
 }
