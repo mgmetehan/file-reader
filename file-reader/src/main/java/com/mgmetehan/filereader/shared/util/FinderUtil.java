@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @UtilityClass
-public class FinderAll {
+public class FinderUtil {
     //var path = "/Users/mgmetehan/Desktop/chomar";
 
     public List<String> listAllTypesInFolder(String path) {

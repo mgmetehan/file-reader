@@ -1,9 +1,7 @@
 package com.mgmetehan.filereader.type.txt;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.IOException;
 
 public class TxtReader {
 
@@ -57,7 +55,7 @@ public class TxtReader {
         }
     }
 
-    public void readTxtWord(String path,String findWord) {
+    public void readTxtFindWord(String path,String findWord) {
         BufferedReader bufferedReader = null;
         int offset = 0;
         try {
@@ -86,10 +84,11 @@ public class TxtReader {
         }
     }
 
+
     public static void main(String[] args) {
         var path = "/Users/mgmetehan/Desktop/chomar/c-port.txt";
         TxtReader txtReader = new TxtReader();
         //txtReader.readTxtFirst2Byte(path);
-        txtReader.readTxtWord(path,"git");
+        txtReader.readTxtFindWord(path,"git");
     }
 }
