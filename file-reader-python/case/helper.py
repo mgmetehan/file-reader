@@ -36,4 +36,4 @@ def searchForStringInFile(file_path, search_string):
             isFind = False
 
     if isFind == False:
-        print("MALLWARE is not found!")
+        print("MALWARE is not found!")
